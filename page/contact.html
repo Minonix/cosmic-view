@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cosmic View</title>
-    <link rel="stylesheet" href="../css/style.menu.css">
     <link rel="stylesheet" href="../css/style.contact.css">
-
 </head>
 <body>
 
@@ -27,4 +25,12 @@
     <header></header>
 
 </body>
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
 </html>
