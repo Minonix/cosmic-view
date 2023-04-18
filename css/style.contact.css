@@ -1,77 +1,64 @@
-header {
-    background-color: #232323;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 80px;
-}
-
-.menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 999;
-}
-
-.menu li {
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
     list-style: none;
 }
 
-.menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 0 20px;
-    display: block;
-    line-height: 80px;
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #181616;
 }
 
-.menu-icon {
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    display: none;
+header{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../img/landscape.jpg);
+    background-size: cover;
 }
 
-@media only screen and (max-width: 768px) {
+.navbar{
+    position: absolute;
+    padding: 50px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-    .menu-icon{
-        display: block;
-    }
 
-    .menu {
-        position: absolute;
-        top: 80px;
-        left: 0;
-        background-color: #232323;
-        width: 100%;
-        height: calc(100vh - 80px);
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        overflow: hidden;
-        transition: all 0.5s ease-in-out;
-        transform: translateY(-100%);
-    }
+.navbar a{
+    color: white;
+}
 
-    .menu.open {
-        transform: translateY(0%);
-    }
+.navbar .logo{
+    font-size: 2em;
+    font-weight: blob;
+}
 
-    .menu a {
-        font-size: 24px;
-        line-height: 40px;
-        padding: 10px;
+.navbar .nav-links ul{
+    display: flex;
+}
+
+.navbar .nav-links ul li{
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul li.active a{
+    color: red;
+    font-weight: 600;
+}
+
+.navbar .manu-hamburger{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    whidth: 35px;
+}
+
+@media screen and(max-width: 900px){
+    .nav-links{
+        display: none;
     }
 }
