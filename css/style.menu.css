@@ -1,0 +1,105 @@
+body{
+    background-color: #1d1f22;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Menu principal */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #0000007c;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+  }
+
+.menu li {
+    position: relative;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: #212427;
+}
+
+.menu li:hover > ul {
+    display: block;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Sous-menu */
+.submenu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: #1d1f22;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-shadow: 0px 4px 5px rgba(0,0,0,0.3);
+}
+
+.submenu ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.submenu ul li:hover {
+    background-color: #212427;
+}
+
+/* Bouton de menu responsive */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+.menu {
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu li {
+    width: 100%;
+    text-align: center;
+}
+
+.menu-toggle {
+    display: block;
+}
+
+.submenu {
+    position: static;
+}
+
+.submenu ul {
+    width: 100%;
+}
+}
+
+.dotted {border-style: dotted;}
+.dashed {border-style: dashed;}
+.solid {border-style: solid;}
+.double {border-style: double;}
+.groove {border-style: groove;}
+.ridge {border-style: ridge;}
+.inset {border-style: inset;}
+.outset {border-style: outset;}
+.none {border-style: none;}
+.hidden {border-style: hidden;}
+.mix {border-style: dotted dashed solid double;}
