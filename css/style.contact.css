@@ -37,7 +37,7 @@ nav {
     line-height: 80px;
 }
 
-.menu-icon img{
+.menu-icon {
     color: white;
     font-size: 24px;
     cursor: pointer;
@@ -46,7 +46,7 @@ nav {
 
 @media only screen and (max-width: 768px) {
 
-    .menu-icon img{
+    .menu-icon{
         display: block;
     }
 
