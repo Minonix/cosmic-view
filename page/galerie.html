@@ -10,40 +10,33 @@
     <script src="../js/script.js"></script>
 </head>
 <body>
-<header>
-<nav>
-<ul class="menu">
-    <li><a href="../index.html">Accueil</a></li>
-    <li><a href="#">les Missions spacial</a></li>
-    <li class="submenu">
-    <a href="#">Planètes</a>
-    <ul>
-        <li><a href="#">Mercure</a></li>
-        <li><a href="#">Vénus</a></li>
-        <li><a href="#">Terre</a></li>
-        <li><a href="#">Mars</a></li>
-        <li><a href="#">Jupiter</a></li>
-        <li><a href="#">Saturne</a></li>
-        <li><a href="#">Uranus</a></li>
-        <li><a href="#">Neptune</a></li>
-    </ul>
-    </li>
-    <li><a href="#">Galerie</a></li>
-    <li><a href="contact.html">Contact</a></li>
-</ul>
+<nav class="navbar">
+    <a href="../index.html" class="logo">Cosmic View</a>
+    <div class="nav-links">
+        <ul>
+            <li class="active"><a href="../index.html">Accueil</a></li>
+            <li><a href="#">les Missions</a></li>
+            <li><a href="#">Planètes</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <img src="../img/menu-btn.png" class="menu-hamburger" alt="image de bouton de menu">
 </nav>
-</header>
 <!--article pour afficher des image -->
-<article class="art-gal">
-    <h1>Galerie</h1>
-    <p class="gal"><br>
-        <img src="../img/athmosphere-terre.jpg" alt="">
-        <img src="../img/moonthumb.jpg" alt="">
-        <img src="../img/terre-global.jpg" alt="">
-        <img src="../img/galax-hubble_j0204_potw2315a.jpg" alt="">
-        <img src="../img/pillier-de-la-creation.png" alt="">
-        <img src="../img/falaise-cosmique.png" alt="">
-    </p>
+<main>
+    <article class="art-gal">
+        <h1>Galerie</h1>
+        <p class="gal"><br>
+            <img src="../img/athmosphere-terre.jpg" alt="">
+            <img src="../img/moonthumb.jpg" alt="">
+            <img src="../img/terre-global.jpg" alt="">
+            <img src="../img/galax-hubble_j0204_potw2315a.jpg" alt="">
+            <img src="../img/pillier-de-la-creation.png" alt="">
+            <img src="../img/falaise-cosmique.png" alt="">
+        </p>
     </article>
+</main>
 </body>
+<script src="../js/script.js"></script>
 </html>

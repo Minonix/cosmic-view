@@ -7,32 +7,21 @@
     <title>Cosmic View</title>
     <link rel="stylesheet" href="css/style.menu.css">
     <link rel="stylesheet" href="css/style.index.css">
-    <script src="js/script.js"></script>
 </head>
 <body>
-<header>
-<nav>
-    <ul class="menu">
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">les Missions</a></li>
-        <li class="submenu">
-        <a href="#">Planètes</a>
+<nav class="navbar">
+    <a href="index.html" class="logo">Cosmic View</a>
+    <div class="nav-links">
         <ul>
-            <li><a href="#">Mercure</a></li>
-            <li><a href="#">Vénus</a></li>
-            <li><a href="#">Terre</a></li>
-            <li><a href="#">Mars</a></li>
-            <li><a href="#">Jupiter</a></li>
-            <li><a href="#">Saturne</a></li>
-            <li><a href="#">Uranus</a></li>
-            <li><a href="#">Neptune</a></li>
+            <li class="active"><a href="index.html">Accueil</a></li>
+            <li><a href="#">les Missions</a></li>
+            <li><a href="#">Planètes</a></li>
+            <li><a href="page/galerie.html">Galerie</a></li>
+            <li><a href="page/contact.html">Contact</a></li>
         </ul>
-        </li>
-        <li><a href="page/galerie.html">Galerie</a></li>
-        <li><a href="page/contact.html">Contact</a></li>
-    </ul>
+    </div>
+    <img src="img/menu-btn.png" class="menu-hamburger" alt="image de bouton de menu">
 </nav>
-</header>
 <main>
     <article class="art-pres solid">
     <h1>Présentation</h1>
@@ -57,4 +46,5 @@
     </article>
 </main>
 </body>
+<script src="js/script.js"></script>
 </html>
