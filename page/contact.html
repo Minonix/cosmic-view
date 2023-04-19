@@ -9,28 +9,33 @@
 </head>
 <body>
 
-    <nav class="navbar">
-        <a href="../index.html" class="logo">Cosmic View</a>
-        <div class="nav-links">
-            <ul>
-                <li class="active"><a href="../index.html">Accueil</a></li>
-                <li><a href="#">les Missions</a></li>
-                <li class="submenu"><a href="#">Planètes</a></li>
-                <li><a href="galerie.html">Galerie</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <img src="../img/menu-btn.png" class="menu-hamburger" alt="image de bouton de menu">
-    </nav>
-    <header></header>
+<nav class="navbar">
+    <a href="../index.html" class="logo">Cosmic View</a>
+    <div class="nav-links">
+        <ul>
+            <li class="active"><a href="../index.html">Accueil</a></li>
+            <li><a href="#">les Missions</a></li>
+            <li class="submenu">
+                <a href="#">Planètes</a>
+                <ul>
+                    <li><a href="#">Mercure</a></li>
+                    <li><a href="#">Vénus</a></li>
+                    <li><a href="#">Terre</a></li>
+                    <li><a href="#">Mars</a></li>
+                    <li><a href="#">Jupiter</a></li>
+                    <li><a href="#">Saturne</a></li>
+                    <li><a href="#">Uranus</a></li>
+                    <li><a href="#">Neptune</a></li>
+                </ul>
+            </li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <img src="../img/menu-btn.png" class="menu-hamburger" alt="image de bouton de menu">
+</nav>
+<header></header>
 
 </body>
-    <script>
-        const menuHamburger = document.querySelector(".menu-hamburger")
-        const navLinks = document.querySelector(".nav-links")
-
-        menuHamburger.addEventListener('click',()=>{
-        navLinks.classList.toggle('mobile-menu')
-        })
-    </script>
+<script src="../js/script.js"></script>
 </html>

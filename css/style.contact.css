@@ -17,6 +17,7 @@ header{
 }
 
 .navbar{
+    position: fixed;
     position: absolute;
     padding: 50px;
     display:flex;
@@ -55,6 +56,16 @@ header{
     right: 25px;
     width: 35px;
 }
+/*test*/
+.submenu ul{
+    flex-direction: column;
+    padding: 5px;
+}
+.submenu :hover ul{
+    margin-top: -100%;
+    transition: all 0.5s ease;
+}
+
 
 @media screen and (max-width: 900px) {
     .navbar{
@@ -85,7 +96,7 @@ header{
         align-items: center;
         margin-left: -100%;
         transition: all 0.5s ease;
-}
+    }
 
     .mobile-menu{
         margin-left: 0;
