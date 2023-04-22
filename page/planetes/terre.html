@@ -7,7 +7,6 @@
     <title>Cosmic View</title>
     <link rel="stylesheet" href="../../css/style.menu.css">
     <link rel="stylesheet" href="../../css/style.terre.css">
-    <?php include("envoyer.php"); ?>
 </head>
 <body>
 <nav class="navbar">
@@ -79,18 +78,6 @@
     </div>
 </div>
 </main>
-<form method="POST" action="envoyer.php">
-    <label for="nom">Nom:</label>
-    <input type="text" id="nom" name="nom" required>
-    <br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    <br>
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" required></textarea>
-    <br>
-    <input type="submit" value="Envoyer">
-</form>
 
 </body>
 <script src="../../js/script.js"></script>
