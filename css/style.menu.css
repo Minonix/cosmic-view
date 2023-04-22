@@ -64,7 +64,7 @@ nav{
     width: 35px;
 }
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 926px) {
     .navbar{
         padding: 0;
     }

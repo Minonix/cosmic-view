@@ -14,7 +14,7 @@
     box-shadow: 5px 6px 5px rgba(0,0,0,0.3);
     margin: 15px 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 926px) {
     .art-pres{
         margin: 20px 0;
     }
