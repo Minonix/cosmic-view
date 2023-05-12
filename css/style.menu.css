@@ -18,13 +18,14 @@ main{
 
 nav{
     margin-bottom: 100px;
-    position: sticky;
     top :0px;
     background-color: #0f0f0fcb;
 }
 
 .navbar{
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     padding: 50px;
     cursor: pointer;
     display:flex;
