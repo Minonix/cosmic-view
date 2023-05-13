@@ -17,17 +17,17 @@
     <a href="index.html" class="logo">Cosmic View</a>
     <div class="nav-links">
         <ul>
-            <li class="active"><a href="#" class="ch-index">Accueil</a></li>
-            <li><a href="#" class="ch-mission">les Missions</a></li>
-            <li><a href="#" class="ch-planete">Planètes</a></li>
-            <li><a href="#" class="ch-galerie">Galerie</a></li>
-            <li><a href="#" class="ch-contact">Contact</a></li>
+            <li class="active"><a href="#index" class="ch-index">Accueil</a></li>
+            <li><a href="#mission" class="ch-mission">les Missions</a></li>
+            <li><a href="#planete" class="ch-planete">Planètes</a></li>
+            <li><a href="#galerie" class="ch-galerie">Galerie</a></li>
+            <li><a href="#contact" class="ch-contact">Contact</a></li>
         </ul>
     </div>
     <img src="img/menu-btn.jpg" class="menu-hamburger" alt="image de bouton de menu">
 </nav>
 <main> <!--! réorganiser les fichier de page -->
-<section class="index-section"> <!--page d'accueil -->
+<section id="index" class=""> <!--page d'accueil -->
     <article class="art-pres solid">
     <h1>Présentation</h1>
     <p class="pres">Bienvenue sur notre site dédié à l'espace !<br><br>
@@ -45,17 +45,17 @@
         <img src="img/moonthumb.jpg" alt="">
         <img src="img/terre-global.jpg" alt="">
         <img src="img/galax-hubble_j0204_potw2315a.jpg" alt="">
-        <img src="img/pillier-de-la-creation.png" alt="">
-        <img src="img/falaise-cosmique.png" alt="">
+        <img src="img/pillier-de-la-creation.jpg" alt="">
+        <img src="img/falaise-cosmique.jpg" alt="">
     </p>
     </article>
 </section>
 
-<section class="missione-section none"> <!-- page des missions -->
+<section id="mission" class="none"> <!-- page des missions -->
     <h1 style="color: rgb(255, 0, 0); text-align: center">En cours de rédaction ...</h1>
 </section>
 
-<section class="planete-section none"> <!-- page des planetes -->
+<section id="planete" class="none"> <!-- page des planetes -->
 <a href="#">
     <article class="planetes">
         <img src="img/sun.jpg" alt="">
@@ -108,7 +108,7 @@
 </a>
 </section>
 
-<section class="galerie-section none"> <!--page de la galerie-->
+<section id="galerie" class="none"> <!--page de la galerie-->
 <article class="art-gal">
     <h1>Galerie</h1>
     <div class="gal">
@@ -117,8 +117,8 @@
         <img src="../img/moonthumb.jpg" alt="">
         <img src="../img/terre-global.jpg" alt="">
         <img src="../img/galax-hubble_j0204_potw2315a.jpg" alt="">
-        <img src="../img/pillier-de-la-creation.png" alt="">
-        <img src="../img/falaise-cosmique.png" alt="">
+        <img src="../img/pillier-de-la-creation.jpg" alt="">
+        <img src="../img/falaise-cosmique.jpg" alt="">
         <img src="../img/jupiter.jpg" alt="">
         <img src="../img/mars.jpg" alt="">
         <img src="../img/mercure.jpg" alt="">
@@ -134,74 +134,53 @@
 </article>
 </section>
 
-<section class="contact-section none"> <!-- page de contact -->
+<section id="contact" class="none"> <!-- page de contact -->
     <h1 style="color: rgb(255, 0, 0); text-align: center">En cours de rédaction ...</h1>
 </section>
 
 </main>
 </body>
+<script src="js/script.js"></script>
 <script>
-    const index = document.querySelector(".ch-index");
-    const pgIndex = document.querySelector(".index-section");
+// Sélectionnez tous les liens dans la barre de navigation
+const NavLinks = document.querySelectorAll('.nav-links a');
 
-    const mission = document.querySelector(".ch-mission");
-    const pgMission = document.querySelector(".mission-section");
+// Sélectionnez toutes les sections à afficher / masquer
+const sections = document.querySelectorAll('main section');
 
-    const planete = document.querySelector(".ch-planete");
-    const pgPlanete = document.querySelector(".planete-section");
+const nav = document.querySelector(".nav-links")
 
-    const galerie = document.querySelector(".ch-galerie");
-    const pgGalerie = document.querySelector(".galerie-section");
+// Par défaut, afficher la section d'accueil et ajouter la classe "active" au lien correspondant
+document.getElementById('index').classList.remove('none');
+NavLinks[0].classList.add('active');
 
-    const contact = document.querySelector(".ch-contact");
-    const pgContact = document.querySelector(".contact-section");
+// Ajoutez un écouteur d'événements de clic à chaque lien dans la barre de navigation
+NavLinks.forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    event.preventDefault(); // Empêche le lien de se comporter normalement
 
-    index.addEventListener("click", () => {
-        pgIndex.classList.toggle("none");
-        navLinks.classList.toggle('mobile-menu');
-        pgMission.classList.add("none");
-        pgPlanete.classList.add("none");
-        pgGalerie.classList.add("none");
-        pgContact.classList.add("none");
-    })
+    nav.classList.toggle('mobile-menu')
 
-    mission.addEventListener("click", () => {
-        pgMission.classList.toggle("none");
-        navLinks.classList.toggle('mobile-menu');
-        pgIndex.classList.add("none");
-        pgPlanete.classList.add("none");
-        pgGalerie.classList.add("none");
-        pgContact.classList.add("none");
-    })
+    // Retirez la classe "active" de tous les liens
+    NavLinks.forEach(function(link) {
+      link.classList.remove('active');
+    });
 
-    planete.addEventListener("click", () => {
-        pgPlanete.classList.toggle("none");
-        navLinks.classList.toggle('mobile-menu');
-        pgIndex.classList.add("none");
-        pgMission.classList.add("none");
-        pgGalerie.classList.add("none");
-        pgContact.classList.add("none");
-    })
+    // Ajoutez la classe "active" au lien cliqué
+    this.classList.add('active');
 
-    galerie.addEventListener("click", () => {
-        pgGalerie.classList.toggle("none");
-        navLinks.classList.toggle('mobile-menu');
-        pgIndex.classList.add("none");
-        pgMission.classList.add("none");
-        pgPlanete.classList.add("none");
-        pgContact.classList.add("none");
-    })
+    // Parcourez toutes les sections et masquez-les en ajoutant la classe "none"
+    sections.forEach(function(section) {
+      section.classList.add('none');
+    });
 
-    contact.addEventListener("click", () => {
-        pgContact.classList.toggle("none");
-        navLinks.classList.toggle('mobile-menu');
-        pgIndex.classList.add("none");
-        pgMission.classList.add("none");
-        pgPlanete.classList.add("none");
-        pgGalerie.classList.add("none");
-    })
+    // Affichez la section correspondante en la recherchant par son identifiant unique et en retirant la classe "none"
+    const targetId = this.getAttribute('href').substring(1); // Retirez le "#" de l'URL pour conaitre l'id de la section
+    document.getElementById(targetId).classList.remove('none');
+  });
+});
 
 </script>
-<script src="js/script.js"></script>
+
 <noscript>Sorry, your browser does not support JavaScript!</noscript>
 </html>
