@@ -7,7 +7,7 @@
     <title>Cosmic View</title>
     <link rel="stylesheet" href="css/style.menu.css">
     <link rel="stylesheet" href="css/style.index.css">
-    <link rel="stylesheet" href="css/style.mission.css">
+    <link rel="stylesheet" href="#">
     <link rel="stylesheet" href="css/style.planetes.css">
     <link rel="stylesheet" href="css/style.contact.css">
     <link rel="stylesheet" href="css/style.gal.css">
@@ -17,17 +17,17 @@
     <a href="index.html" class="logo">Cosmic View</a>
     <div class="nav-links">
         <ul>
-            <li class="active"><a href="#index" class="ch-index">Accueil</a></li>
-            <li><a href="#mission" class="ch-mission">les Missions</a></li>
-            <li><a href="#planete" class="ch-planete">Planètes</a></li>
-            <li><a href="#galerie" class="ch-galerie">Galerie</a></li>
-            <li><a href="#contact" class="ch-contact">Contact</a></li>
+            <li class="active"><a href="#index" class="ch-index" alt="index">Accueil</a></li>
+            <li><a href="#mission" class="ch-mission" alt="mission">les Missions</a></li>
+            <li><a href="#planete" class="ch-planete" alt="planete">Planètes</a></li>
+            <li><a href="#galerie" class="ch-galerie" alt="galerie">Galerie</a></li>
+            <li><a href="#contact" class="ch-contact" alt="contact">Contact</a></li>
         </ul>
     </div>
     <img src="img/menu-btn.jpg" class="menu-hamburger" alt="image de bouton de menu">
 </nav>
 <main>
-<section id="index" class=""> <!--page d'accueil -->
+<section id="index" class="none"> <!--page d'accueil -->
     <article class="art-pres solid">
     <h1>Présentation</h1>
     <p class="pres">Bienvenue sur notre site dédié à l'espace !<br><br>
@@ -150,9 +150,33 @@ const sections = document.querySelectorAll('main section');
 
 const nav = document.querySelector(".nav-links")
 
-// Par défaut, afficher la section d'accueil et ajouter la classe "active" au lien correspondant
-document.getElementById('index').classList.remove('none');
-NavLinks[0].classList.add('active');
+const menuSelectionne = getCookieValue("menuSelectionne");
+
+if (menuSelectionne) {
+  document.getElementById(menuSelectionne).classList.remove('none');
+  NavLinks[0].classList.add('active');
+  console.log(`Le cookie "menuSelectionne" existe et sa valeur est "${menuSelectionne}".`);
+  deleteCookie('menuSelectionne');
+  console.log("Le cookie 'menuSelectionne' a été supprimé.");
+} else {
+  // Par défaut, afficher la section d'accueil et ajouter la classe "active" au lien correspondant
+  document.getElementById('index').classList.remove('none');
+  NavLinks[0].classList.add('active');
+  console.log("Le cookie 'menuSelectionne' n'existe pas.");
+}
+
+function deleteCookie(name) {
+  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
+
+function getCookieValue(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) {
+    return parts.pop().split(";").shift();
+  }
+}
 
 // Ajoutez un écouteur d'événements de clic à chaque lien dans la barre de navigation
 NavLinks.forEach(function(link) {
@@ -179,8 +203,7 @@ NavLinks.forEach(function(link) {
     document.getElementById(targetId).classList.remove('none');
   });
 });
-
-</script> <!--js pour le changement de page-->
+</script>
 
 <noscript>Sorry, your browser does not support JavaScript!</noscript>
 </html>
