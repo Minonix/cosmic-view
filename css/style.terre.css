@@ -1,3 +1,6 @@
+main *{
+    list-style: disc;
+}
 .box-paragraphe p{
     padding: 1.5em 0;
     font-size: 20px;
