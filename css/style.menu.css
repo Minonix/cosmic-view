@@ -22,9 +22,10 @@ nav{
 }
 
 .navbar{
+    position: fixed;
     top: 0;
     left: 0;
-    padding: 50px;
+    padding: 35px;
     cursor: pointer;
     display:flex;
     align-items:center;
@@ -67,6 +68,7 @@ nav{
 @media screen and (max-width: 926px) {
     .navbar{
         padding: 0;
+        position: inherit;
     }
 
     .navbar .logo{
