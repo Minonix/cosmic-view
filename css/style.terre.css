@@ -1,6 +1,7 @@
 * {
   text-decoration: none;
 }
+
 main * {
   list-style: disc;
 }
@@ -84,9 +85,11 @@ main * {
   .box-main {
     grid-template-columns: 1fr 3fr 1fr;
   }
+
   .box-paragraphe {
     margin: 5px 0px 5px 0em;
   }
+
   .box-chiffre {
     width: 19vw;
   }
@@ -111,13 +114,16 @@ main * {
     grid-row: 2/2;
     width: 100%;
   }
+
   .img-planetes {
     grid-column: 2/2;
     grid-row: 2/2;
   }
+
   .source {
     margin: 5px 2.5vw 5px 5vw;
   }
+
   .source li {
     padding: 0.25em 0.2em;
   }
