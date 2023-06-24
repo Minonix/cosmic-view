@@ -85,7 +85,7 @@ main * {
     grid-template-columns: 1fr 3fr 1fr;
   }
   .box-paragraphe {
-    margin: 5px 0 5px 0em;
+    margin: 5px 0px 5px 0em;
   }
   .box-chiffre {
     width: 19vw;
