@@ -1,132 +1,154 @@
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
 
-.none{
-    display: none;
+.none {
+  display: none;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    color: #fff;
-    background-color: #1d1f22;
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  background-color: #1d1f22;
 }
 
-main{
-    margin-top: 145px;
+main {
+  margin-top: 145px;
 }
 
-nav{
-    margin-bottom: 100px;
-    top :0px;
+nav {
+  margin-bottom: 100px;
+  top: 0px;
 }
 
-.navbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 35px;
-    cursor: pointer;
-    display:flex;
-    align-items:center;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: #0f0f0fcb;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 35px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #0f0f0fcb;
 }
 
-.navbar a{
-    color: white;
+.navbar a {
+  color: white;
 }
 
-.navbar .logo{
-    font-size: 2em;
-    font-weight: blob;
+.navbar .logo {
+  font-size: 2em;
+  font-weight: blob;
 }
 
-.navbar .nav-links ul{
-    display: flex;
+.navbar .nav-links ul {
+  display: flex;
 }
 
-.navbar .nav-links ul li{
-    margin: 0 25px;
+.navbar .nav-links ul li {
+  margin: 0 25px;
 }
 
-.navbar .nav-links ul li.active a{
-    color: red;
-    font-weight: 600;
+.navbar .nav-links ul li.active a {
+  color: red;
+  font-weight: 600;
 }
 
-.navbar .menu-hamburger{
-    display: none;
-    position: absolute;
-    top: 50px;
-    right: 25px;
-    width: 35px;
+.navbar .menu-hamburger {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 25px;
+  width: 35px;
 }
 
 @media screen and (max-width: 926px) {
-    .navbar{
-        padding: 0;
-        position: inherit;
-    }
+  .navbar {
+    padding: 0;
+    position: inherit;
+  }
 
-    .navbar .logo{
-        position: absolute;
-        top: 50px;
-        left: 20px;
-    }
+  .navbar .logo {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+  }
 
-    .navbar .menu-hamburger{
-        display: block;
-    }
+  .navbar .menu-hamburger {
+    display: block;
+  }
 
-    .nav-links{
-        top: 0;
-        left: 0;
-        position: absolute;
-        background-color: rgba(27, 27, 27, 0.719);
-        backdrop-filter: blur(8px);
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left: 100%;
-        transition: all 0.5s ease;
-        -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -ms-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
+  .nav-links {
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(27, 27, 27, 0.719);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100%;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+  }
+
+  .mobile-menu {
+    margin-left: 0;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar .nav-links ul li {
+    margin: 1.2em;
+  }
 }
 
-    .mobile-menu{
-        margin-left: 0;
-    }
-
-    .nav-links ul{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .navbar .nav-links ul li{
-        margin: 1.2em;
-    }
+.dotted {
+  border-style: dotted;
 }
-
-.dotted {border-style: dotted;}
-.dashed {border-style: dashed;}
-.solid {border-style: solid;}
-.double {border-style: double;}
-.groove {border-style: groove;}
-.ridge {border-style: ridge;}
-.inset {border-style: inset;}
-.outset {border-style: outset;}
-.none-border {border-style: none;}
-.hidden {border-style: hidden;}
-.mix {border-style: dotted dashed solid double;}
+.dashed {
+  border-style: dashed;
+}
+.solid {
+  border-style: solid;
+}
+.double {
+  border-style: double;
+}
+.groove {
+  border-style: groove;
+}
+.ridge {
+  border-style: ridge;
+}
+.inset {
+  border-style: inset;
+}
+.outset {
+  border-style: outset;
+}
+.none-border {
+  border-style: none;
+}
+.hidden {
+  border-style: hidden;
+}
+.mix {
+  border-style: dotted dashed solid double;
+}
