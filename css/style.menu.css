@@ -5,6 +5,10 @@
     list-style: none;
 }
 
+.none{
+    display: none;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
@@ -95,7 +99,11 @@ nav{
         align-items: center;
         margin-left: 100%;
         transition: all 0.5s ease;
-    }
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+}
 
     .mobile-menu{
         margin-left: 0;
@@ -119,6 +127,6 @@ nav{
 .ridge {border-style: ridge;}
 .inset {border-style: inset;}
 .outset {border-style: outset;}
-.none {border-style: none;}
+.none-border {border-style: none;}
 .hidden {border-style: hidden;}
 .mix {border-style: dotted dashed solid double;}
