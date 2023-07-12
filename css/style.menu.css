@@ -99,6 +99,10 @@ nav{
         margin-left: 0;
     }
 
+    .none-mobile{
+        display : none;
+    }
+
     .nav-links ul{
         display: flex;
         flex-direction: column;
