@@ -111,6 +111,10 @@ nav {
   .mobile-menu {
     margin-left: 0;
   }
+  
+  .none-mobile{
+    display : none;
+  }
 
   .nav-links ul {
     display: flex;
