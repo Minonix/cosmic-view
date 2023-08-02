@@ -72,7 +72,6 @@ nav {
 }
 
 @media screen and (max-width: 926px) {
-
   .cover-nav{
     z-index: 1;
     position:fixed;
