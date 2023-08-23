@@ -6,6 +6,16 @@ main * {
   list-style: disc;
 }
 
+article {
+  display: grid;
+}
+.box-main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
 .box-paragraphe {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
@@ -23,13 +33,6 @@ main * {
   text-align: center;
   color: rgb(73, 182, 255);
   font-style: bold;
-}
-
-.box-main {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: auto;
-  grid-gap: 20px;
 }
 
 .img-planetes {

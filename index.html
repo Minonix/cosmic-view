@@ -14,25 +14,40 @@
 </head>
 
 <body>
-    <div class="cover-nav"></div><!-- permet d'avoir un flout sur la barre de navigation pour les mobile -->
-    <nav class="navbar"><!-- barre de navigation -->
-        <a href="index.html" class="logo">Cosmic View</a>
-        <div class="nav-links none-mobile">
-            <ul>
-                <li class="active"><a href="#index" class="ch-index" alt="index">Accueil</a></li>
-                <li><a href="#mission" class="ch-mission" alt="mission">les Missions</a></li>
-                <li><a href="#planete" class="ch-planete" alt="planete">Planètes</a></li>
-                <li><a href="#galerie" class="ch-galerie" alt="galerie">Galerie</a></li>
-                <li><a href="#contact" class="ch-contact" alt="contact">Contact</a></li>
-            </ul>
-        </div>
-        <img src="img/menu-btn.webp" class="menu-hamburger" alt="image de bouton de menu">
+    <nav>
+        <div class="cover-nav"></div>
+        <a class="logo" href="index.html">Cosmic-View</a>
+        <ul class="nav-bar nav-links none-mobile">
+            <li><a href="#index" class="ch-index" alt="index">Accueil</a></li>
+            <li><a href="#mission" class="ch-mission" alt="mission">Mission</a></li>
+            <li class="nav-item">
+                <a href="#planete" class="" alt="planete">Planete</a>
+                <div class="info-bar">
+                    <a href="planetes/sun.html" class="sun">Le Soleil</a>
+                    <div class="column1">
+                        <a href="planetes/mercure.html">Mercure</a>
+                        <a href="planetes/venus.html">Venus<br/></a>
+                        <a href="planetes/terre.html">La Terre</a>
+                        <a href="planetes/mars.html">Mars</a>
+                    </div>
+                    <div class="column2">
+                        <a href="planetes/jupiter.html">Jupiter</a>
+                        <a href="planetes/saturne.html">Saturne</a>
+                        <a href="planetes/uranus.html">Uranus</a>
+                        <a href="planetes/neptune.html">Neptune</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#galerie" class="ch-galerie" alt="galerie">Galerie</a></li>
+            <li><a href="#contact" class="ch-contact" alt="contact">Contacts</a></li>
+        </ul>
+        <img class="img-brg menu-hamburger" src="img/menu.webp" alt="menu-brg" />
     </nav>
 
     <main>
 
         <section id="index" class="none"> <!--page d'accueil -->
-            <article class="art-pres solid">
+            <article class="art-pres ">
                 <h1>Présentation</h1>
                 <p class="pres">Bienvenue sur notre site dédié à l'espace !<br><br>
                     ici, vous pourrez découvrir de superbes images de notre système solaire et de l'univers
@@ -46,7 +61,7 @@
             </article>
             <!--article pour afficher des image -->
             <article class="art-gal">
-                <h1>Quelle que images :</h1>
+                <h1>Quelques images :</h1>
                 <p class="gal"><br>
                     <img src="img/athmosphere-terre.webp" alt="">
                     <img src="img/moonthumb.webp" alt="">
@@ -150,7 +165,7 @@
 <script src="js/script.js"></script>
 <script>
     // Sélectionnez tous les liens dans la barre de navigation
-    const NavLinks = document.querySelectorAll('.nav-links a');
+    const NavLinks = document.querySelectorAll('.nav-links li a');
 
     // Sélectionnez toutes les sections à afficher / masquer
     const sections = document.querySelectorAll('main section');
@@ -191,14 +206,6 @@
             event.preventDefault(); // Empêche le lien de se comporter normalement
 
             nav.classList.toggle('mobile-menu')
-
-            // Retirez la classe "active" de tous les liens
-            NavLinks.forEach(function (link) {
-                link.classList.remove('active');
-            });
-
-            // Ajoutez la classe "active" au lien cliqué
-            this.classList.add('active');
 
             // Parcourez toutes les sections et masquez-les en ajoutant la classe "none"
             sections.forEach(function (section) {
