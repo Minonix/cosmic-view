@@ -16,17 +16,17 @@ menuHamburger.addEventListener("click", () => {
 });
 
 if (window.innerWidth > 926) {
-  var navItemsWithInfoBars = document.querySelectorAll(".nav-item, .info-bar");
+  const navItemsWithInfoBars = document.querySelectorAll(".nav-item, .info-bar");
 
   navItemsWithInfoBars.forEach(function (item) {
-    var infoBar = item.querySelector(".info-bar");
+    const infoBar = item.querySelector(".info-bar");
 
     item.addEventListener("mouseover", function () {
       infoBar.style.display = "grid";
     });
 
     item.addEventListener("mouseout", function (event) {
-      var relatedTarget = event.relatedTarget || event.toElement;
+      let relatedTarget = event.relatedTarget || event.toElement;
 
       if (!infoBar.contains(relatedTarget)) {
         infoBar.style.display = "none";
@@ -38,7 +38,7 @@ if (window.innerWidth > 926) {
     });
 
     infoBar.addEventListener("mouseout", function (event) {
-      var relatedTarget = event.relatedTarget || event.toElement;
+      let relatedTarget = event.relatedTarget || event.toElement;
 
       if (!item.contains(relatedTarget)) {
         infoBar.style.display = "none";
@@ -47,7 +47,7 @@ if (window.innerWidth > 926) {
   });
 
   // Sélectionnez tous les liens à l'intérieur de .info-bar
-  var linksInsideInfoBar = document.querySelectorAll(".info-bar a");
+  const linksInsideInfoBar = document.querySelectorAll(".info-bar a");
 
   // Ajoutez un gestionnaire d'événement clic à chaque lien
   linksInsideInfoBar.forEach(function (link) {

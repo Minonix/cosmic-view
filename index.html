@@ -160,8 +160,8 @@
 </body>
 <script src="js/script.js"></script>
 <script>
-    // Sélectionnez tous les liens dans la barre de navigation
-    const NavLinks = document.querySelectorAll('.nav-links li a');
+    // Sélectionnez tous les liens dans la barre de navigation sauf ce dans .info-bar
+    const NavLinks = document.querySelectorAll('.nav-links li a:not(.info-bar a)');
 
     // Sélectionnez toutes les sections à afficher / masquer
     const sections = document.querySelectorAll('main section');
