@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosmic View</title>
+    <title>Cosmic View - Accueil</title>
     <link rel="stylesheet" href="scss/index.css">
 </head>
 
@@ -14,10 +14,10 @@
         <div class="cover-nav"></div>
         <a class="logo" href="index.html">Cosmic-View</a>
         <ul class="nav-bar nav-links none-mobile">
-            <li><a href="#index">Accueil</a></li>
-            <li><a href="#mission">Mission</a></li>
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="mission.html">Mission</a></li>
             <li class="nav-item">
-                <a href="#planete">Planete</a>
+                <a href="planetes.html">Planete</a>
                 <div class="info-bar">
                     <a href="planetes/sun.html" class="sun">Le Soleil</a>
                     <div class="column1">
@@ -34,15 +34,15 @@
                     </div>
                 </div>
             </li>
-            <li><a href="#galerie">Galerie</a></li>
-            <li><a href="#contact">Contacts</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
         </ul>
         <img class="img-brg menu-hamburger" src="img/menu.webp" alt="menu" />
     </nav>
 
     <main>
 
-        <section id="index" class="none"> <!--page d'accueil -->
+        <section id="index"> <!--page d'accueil -->
             <article class="art-pres ">
                 <h1>Présentation</h1>
                 <p class="pres">Bienvenue sur notre site dédié à l'espace !<br><br>
@@ -69,151 +69,9 @@
             </article>
         </section>
 
-        <section id="mission" class="none"> <!-- page des missions -->
-            <h1 style="color: rgb(255, 0, 0); text-align: center">En cours de rédaction ...</h1>
-        </section>
-
-        <section id="planete" class="none"> <!-- page des planetes -->
-            <a href="planetes/sun.html">
-                <article class="planetes">
-                    <img src="img/sun.webp" alt="">
-                </article>
-            </a>
-            <a href="planetes/mercure.html">
-                <article class="planetes">
-                    <img src="img/mercure.webp" alt="">
-                </article>
-            </a>
-            <a href="planetes/venus.html">
-                <article class="planetes">
-                    <img src="img/venus.webp" alt="">
-                </article>
-            </a>
-            <a href="planetes/terre.html">
-                <article class="planetes">
-                    <img src="img/terre-global.webp" alt="">
-                </article>
-            </a>
-            <a href="planetes/moon.html">
-                <article class="planetes">
-                    <img src="img/moon.webp" alt="">
-                </article>
-            </a>
-            <a href="planetes/mars.html">
-                <article class="planetes">
-                    <img src="img/mars.webp" alt="">
-                </article>
-            </a>
-            <a href="planetes/jupiter.html">
-                <article class="planetes">
-                    <img src="img/jupiter.webp" alt="">
-                </article>
-            </a>
-            <a href="planetes/saturne.html">
-                <article class="planetes">
-                    <img src="img/saturn.webp" alt="">
-                </article>
-            </a>
-            <a href="planetes/uranus.html">
-                <article class="planetes">
-                    <img src="img/uranus.webp" alt="">
-                </article>
-            </a>
-            <a href="planetes/neptune.html">
-                <article class="planetes">
-                    <img src="img/neptune.webp" alt="">
-                </article>
-            </a>
-        </section>
-
-        <section id="galerie" class="none"> <!--page de la galerie-->
-            <article class="art-gal">
-                <h1>Galerie</h1>
-                <div class="gal">
-                    <br>
-                    <img src="../img/athmosphere-terre.webp" alt="">
-                    <img src="../img/moonthumb.webp" alt="">
-                    <img src="../img/terre-global.webp" alt="">
-                    <img src="../img/galax-hubble_j0204_potw2315a.webp" alt="">
-                    <img src="../img/pillier-de-la-creation.webp" alt="">
-                    <img src="../img/falaise-cosmique.webp" alt="">
-                    <img src="../img/jupiter.webp" alt="">
-                    <img src="../img/mars.webp" alt="">
-                    <img src="../img/mercure.webp" alt="">
-                    <img src="../img/moon.webp" alt="">
-                    <img src="../img/neptune.webp" alt="">
-                    <img src="../img/saturn.webp" alt="">
-                    <img src="../img/space.webp" alt="">
-                    <img src="../img/uranus-2.webp" alt="">
-                    <img src="../img/uranus.webp" alt="">
-                    <img src="../img/venus.webp" alt="">
-                    <img src="../img/sun.webp" alt="">
-                </div>
-            </article>
-        </section>
-
-        <section id="contact" class="none"> <!-- page de contact -->
-            <h1 style="color: rgb(255, 0, 0); text-align: center">En cours de rédaction ...</h1>
-        </section>
-
     </main>
 </body>
 <script src="js/script.js"></script>
-<script>
-    // Sélectionnez tous les liens dans la barre de navigation sauf ce dans .info-bar
-    const NavLinks = document.querySelectorAll('.nav-links li a:not(.info-bar a)');
-
-    // Sélectionnez toutes les sections à afficher / masquer
-    const sections = document.querySelectorAll('main section');
-
-    const nav = document.querySelector(".nav-links")
-
-    const menuSelectionne = getCookieValue("menuSelectionne");
-
-    if (menuSelectionne) {
-        document.getElementById(menuSelectionne).classList.remove('none');
-        NavLinks[0].classList.add('active');
-        console.log(`Le cookie "menuSelectionne" existe et sa valeur est "${menuSelectionne}".`);
-        deleteCookie('menuSelectionne');
-        console.log("Le cookie 'menuSelectionne' a été supprimé.");
-    } else {
-        // Par défaut, afficher la section d'accueil et ajouter la classe "active" au lien correspondant
-        document.getElementById('index').classList.remove('none');
-        NavLinks[0].classList.add('active');
-        console.log("Le cookie 'menuSelectionne' n'existe pas.");
-    }
-
-    function deleteCookie(name) {
-        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-    }
-
-
-    function getCookieValue(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) {
-            return parts.pop().split(";").shift();
-        }
-    }
-
-    // Ajoutez un écouteur d'événements de clic à chaque lien dans la barre de navigation
-    NavLinks.forEach(function (link) {
-        link.addEventListener('click', function (event) {
-            event.preventDefault(); // Empêche le lien de se comporter normalement
-
-            nav.classList.toggle('mobile-menu')
-
-            // Parcourez toutes les sections et masquez-les en ajoutant la classe "none"
-            sections.forEach(function (section) {
-                section.classList.add('none');
-            });
-
-            // Affichez la section correspondante en la recherchant par son identifiant unique et en retirant la classe "none"
-            const targetId = this.getAttribute('href').substring(1); // Retirez le "#" de l'URL pour conaitre l'id de la section
-            document.getElementById(targetId).classList.remove('none');
-        });
-    });
-</script>
 
 <noscript>Sorry, your browser does not support JavaScript!</noscript>
 

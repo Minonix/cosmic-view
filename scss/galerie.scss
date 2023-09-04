@@ -1,28 +1,7 @@
 @import url(../css/style.menu.css);
 
-//! scss de la page index:
-.none {
-    display: none;
-  }
-  
-  .art-pres {
-    background-color: #1d1f22;
-    margin: 20px 15%;
-  }
-  
-  .art-pres h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #fff;
-  }
-  
-  .art-pres p {
-    text-align: center;
-    color: #fff;
-    padding: 20px 5px;
-  }
-  
-  .art-gal {
+//! scss de la page galerie:
+.art-gal {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -43,7 +22,7 @@
   
   @media screen and (max-width: 926px) {
     .art-pres {
-      margin: 20px 5px;
+      margin: 20px 0;
     }
   
     .art-pres h1 {
