@@ -57,3 +57,21 @@ if (window.innerWidth > 926) {
     });
   });
 }
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCZHSsFn0hYpDC3WRUV-wxqwekUATMLDfw",
+  authDomain: "cosmic-view-2023.firebaseapp.com",
+  projectId: "cosmic-view-2023",
+  storageBucket: "cosmic-view-2023.appspot.com",
+  messagingSenderId: "902947151515",
+  appId: "1:902947151515:web:f8617fea18bf245f99b03e"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
