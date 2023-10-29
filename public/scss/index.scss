@@ -1,0 +1,57 @@
+@import url(../css/style.menu.css);
+
+//! scss de la page index:
+.none {
+    display: none;
+  }
+  
+  .art-pres {
+    background-color: #1d1f22;
+    margin: 20px 15%;
+  }
+  
+  .art-pres h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  .art-pres p {
+    text-align: center;
+    color: #fff;
+    padding: 20px 5px;
+  }
+  
+  .art-gal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .gal {
+    margin: 0 0 0 10vw;
+  }
+  
+  .gal img {
+    max-width: 35vw;
+    max-height: 60vh;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.3);
+    margin: 15px 20px;
+  }
+  
+  @media screen and (max-width: 926px) {
+    .art-pres {
+      margin: 20px 5px;
+    }
+  
+    .art-pres h1 {
+      font-size: 25px;
+    }
+  
+    .art-pres p {
+      font-size: 15px;
+    }
+  }
+  
